@@ -30,7 +30,7 @@ angular.module('quiz',[])
 			 pointscat2:0,
 			 pointscat3:0,
 			 pointscat4:0,
-			 image:"http://img0.gtsstatic.com/wallpapers/818b08d21f4a50fa576290b0960e9f02_large.jpeg"
+			 image:"http://image.noelshack.com/fichiers/2016/04/1454160114-diablo-3.jpg"
 			},
 			{id:"02",
 			 categorie:"Animateur",
@@ -46,7 +46,7 @@ angular.module('quiz',[])
 			 pointscat2:10,
 			 pointscat3:0,
 			 pointscat4:0,
-			 image:"http://i38.servimg.com/u/f38/10/08/59/45/10059010.jpg"
+			 image:"http://image.noelshack.com/fichiers/2016/04/1454160190-animateur-colo.jpg"
 			},
 			{id:"03",
 			 categorie:"Chanteur",
@@ -62,7 +62,7 @@ angular.module('quiz',[])
 			 pointscat2:0,
 			 pointscat3:10,
 			 pointscat4:0,
-			image:"http://photos1.tf1.fr/1200/630/stars80-78ed82-1@1x.jpg"
+			image:"http://image.noelshack.com/fichiers/2016/04/1454160223-allumer-feu-avec-amel-bent-4x16l-3kr84e.jpg"
 			},
 			{id:"04",
 			 categorie:"Culture Géneral",
@@ -78,7 +78,7 @@ angular.module('quiz',[])
 			 pointscat2:0,
 			 pointscat3:0,
 			 pointscat4:10,
-			 image:"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/First_Web_Server.jpg/1280px-First_Web_Server.jpg"
+			 image:"http://image.noelshack.com/fichiers/2016/04/1454160274-russie-ukraine-vladimir-poutine-memes-internet.jpg"
 			},
 			{id:"05",
 			 categorie:"Jeu videos",
@@ -94,7 +94,7 @@ angular.module('quiz',[])
 			 pointscat2:0,
 			 pointscat3:0,
 			 pointscat4:0,
-			 image:"http://www.dslretvfx.fr/wp-content/uploads/2015/08/pingpong-after-effects.jpg"
+			 image:"http://image.noelshack.com/fichiers/2016/04/1454160316-107472.jpg"
 			},
 			{id:"06",
 			categorie:"Animateur",
@@ -110,7 +110,7 @@ angular.module('quiz',[])
 			 pointscat2:10,
 			 pointscat3:0,
 			 pointscat4:0,
-			 image:"https://upload.wikimedia.org/wikipedia/commons/6/6f/Facel_Vega_1961_Castle_Hedingham_2008.JPG"
+			 image:"http://image.noelshack.com/fichiers/2016/04/1454160365-animateurs.png"
 			},
 			{id:"07",
 			 categorie:"Chanteur",
@@ -126,7 +126,7 @@ angular.module('quiz',[])
 			 pointscat2:0,
 			 pointscat3:10,
 			 pointscat4:0,
-			 image:"http://www.maxxiweb.com/files/wallpapers/fond/la-boum/72171.jpg"
+			 image:"http://image.noelshack.com/fichiers/2016/04/1454160421-vindicare.png"
 			},
 			{id:"08",
 			 categorie:"Culture Géneral",
@@ -142,7 +142,7 @@ angular.module('quiz',[])
 			 pointscat2:0,
 			 pointscat3:0,
 			 pointscat4:10,
-			 image:"http://blog.iakaa.com/wp-content/uploads/2015/11/Microsoft_Windows_1.0_screenshot.png"
+			 image:"http://image.noelshack.com/fichiers/2016/04/1454160448-chateau-fort-46500.jpg"
 			}
 
 
@@ -203,51 +203,57 @@ angular.module('quiz',[])
 				
 				if ($scope.points ==80)
 				{
-					$scope.texte = "Incroyable,vous avez répondu correctement à toutes les questions !";
-					$scope.image = "http://previews.123rf.com/images/slena/slena1202/slena120200026/12230712-Best-of-the-best-rubber-stamp--Stock-Vector-winner.jpg";
+					$scope.texte = "Super vous êtes trop fort !";
+					$scope.image = "http://image.noelshack.com/fichiers/2016/04/1454160421-vindicare.png";
 				}
 				else if ($scope.categorie1 == 20)
 				{
-					$scope.texte = "Vous êtes incollable en Jeu videos ,Félicitation !";
-					$scope.image = "https://i.ytimg.com/vi/NDN3f-FvWHY/maxresdefault.jpg";
+					$scope.texte = "Bien joué mais c'est pas terrible !";
+					$scope.image = "http://image.noelshack.com/fichiers/2016/04/1454160421-vindicare.png";
 				}
 				else if ($scope.categorie2 == 20)
 				{
 					
-					$scope.texte = "Vous êtes incollable en Voitures ,Félicitation !";
-					$scope.image = "http://shoumi57.free.fr/Photos/albulle/data/photos/Sport%20automobile/F1%20Saison%202006/Imola/Shoumi%20podium%203.jpg";
+					$scope.texte = "pas mal du tout !";
+					$scope.image = "http://image.noelshack.com/fichiers/2016/04/1454160421-vindicare.png";
 				}
 				else if ($scope.categorie3 == 20)
 				{
-					$scope.texte = "Vous êtes incollable en Chanteurs ,Félicitation !";
-					$scope.image = "http://cdn2-europe1.new2.ladmedia.fr/var/europe1/storage/images/europe1/evenements/europe-1-fete-les-30-ans-du-top-50-684322/13694206-1-fre-FR/Europe-1-fete-les-30-ans-du-Top-50.jpg";
+					$scope.texte = "Bien mais sans être bien !";
+					$scope.image = "http://image.noelshack.com/fichiers/2016/04/1454160421-vindicare.png";
+				}
 				}
 				else if ($scope.categorie4 == 20)
 				{
-					$scope.texte = "Vous êtes incollable en Informatique ,Félicitation !";
-					$scope.image = "https://i.ytimg.com/vi/X14FPvwmcWQ/maxresdefault.jpg";
+					$scope.texte = "Bien mais sans être bien!";
+					$scope.image = "http://image.noelshack.com/fichiers/2016/04/1454160421-vindicare.png";
 				}
 				else if ($scope.categorie1 == 15)
 				{
-					$scope.texte = "Presque tout bon en Voitures ,Félicitation !";
-					$scope.image = "http://www.cormontreuil.fr/wp-content/uploads/2010/06/sport-site.jpg";
+					$scope.texte = "VOus avez presque réussie !"
+					$scope.image = "http://image.noelshack.com/fichiers/2016/04/1454160421-vindicare.png";
+				
 				}
+				
 				else if ($scope.categorie2 == 15)
 				{
-					$scope.texte = "Presque tout bon en Chanteurs ,Félicitation !";
-					$scope.image = "http://www.le-top-capendu.fr/cinema-plein-air-a-capendu/image";
+					$scope.texte = "VOus avez presque réussie !"
+					$scope.image = "http://image.noelshack.com/fichiers/2016/04/1454160421-vindicare.png";
 				}
+				
 				else if ($scope.categorie3 == 15)
 				{
-					$scope.texte = "Presque tout bon en Jeu videos,Félicitation !";
-					$scope.image = "http://www.rom-game.fr/multimedia/news/151117_concoursranking.jpg";
+					$scope.texte = "VOus avez presque réussie !"
+					$scope.image = "http://image.noelshack.com/fichiers/2016/04/1454160421-vindicare.png";
 				}
+				
 				else if ($scope.categorie4 == 15)
 				{
-					$scope.texte = "Presque tout bon en Inforamtique ,Félicitation !";
-					$scope.image = "https://i.ytimg.com/vi/X14FPvwmcWQ/maxresdefault.jpg";
+					$scope.texte = "VOus avez presque réussie !"
+					$scope.image = "http://image.noelshack.com/fichiers/2016/04/1454160421-vindicare.png";
 				}
-			}
+				
+			
 			else {
 				$scope.questionnaire = $scope.questions[$scope.numquestion];
 				$scope.image = $scope.questions[$scope.numquestion].image;
