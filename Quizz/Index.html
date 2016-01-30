@@ -1,86 +1,50 @@
-<!doctype html>
-   <html lang="fr">
-        <HEAD>
-          <TITLE>Questions a choix multiple</TITLE>
-             <script src="script.js" type="text/javascript"></script>
-             <meta charset="utf-8">
+<!DOCTYPE html>
+<html ng-app="quiz">
+	<head>
+	 <meta charset="utf-8">
+		<title>QCM </title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-rc.4/angular.min.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<script src="script.js"></script>
+			<link rel="stylesheet" href="css/style.css">
+		
+	</head>
 	
-			<link rel="stylesheet" href="css/style.css" type="text/css" />
-    
-        
-        </HEAD>
-       
-            <CENTER>
-                <H1>Quiz Jeux Vidéo</H1>
-                <FORM NAME = "test_form">
-                <TABLE CELLSPACING=2 CELLPADDING=1 BORDER=1>
-                <TR BGCOLOR="Red">
-                	<TD><B>Question 1</B><P>
-                        Qui a crée Final Fantasy ?</TD>
-                        	<TD><INPUT TYPE = "radio" VALUE = ""
-                                    onClick = "this.form[1].value=1">Squar Enix<BR>
-                                   <INPUT TYPE = "radio" VALUE = ""
-                                    onClick = "this.form[1].value=2">Ubisoft<BR>
-                                   <INPUT TYPE = "radio" VALUE = ""
-                                    onClick = "this.form[1].value=3">Blizzard<BR>
-                                   <INPUT TYPE = "radio" VALUE = ""
-                                    onClick = "this.form[1].value=4">Bohemia<BR></TD>   
-                </TR>
-                <TR BGCOLOR="Green">
-                	<TD><B>Question 2</B><P>
-                            Qui a crée Diablo 3 ?</TD>
-                            	<TD><INPUT TYPE = "radio" VALUE = ""
-                                        onClick = "this.form[2].value=1">Blizzard<BR>
-                                       <INPUT TYPE = "radio" VALUE = ""
-                                        onClick = "this.form[2].value=2">Quantic dream<BR>
-                                       <INPUT TYPE = "radio" VALUE = ""
-                                        onClick = "this.form[2].value=3">Royal Cactus<BR>
-                                       <INPUT TYPE = "radio" VALUE = ""
-                                        onClick = "this.form[2].value=4">Personne<BR></TD>   
-                </TR>
-				<TR BGCOLOR="blue">
-                	<TD><B>Question 3</B><P>
-                            Quel personnage ne fait pas partie de Diablo ?</TD>
-                            	<TD><INPUT TYPE = "radio" VALUE = ""
-                                        onClick = "this.form[3].value=1">Croisé<BR>
-                                       <INPUT TYPE = "radio" VALUE = ""
-                                        onClick = "this.form[3].value=2">Assassin<BR>
-                                       <INPUT TYPE = "radio" VALUE = ""
-                                        onClick = "this.form[3].value=3">Sorcier<BR>
-                                       <INPUT TYPE = "radio" VALUE = ""
-                                        onClick = "this.form[3].value=4">Amazone<BR></TD>   
-                </TR>
-				 <TR BGCOLOR="Pink">
-				<TD><B>Question 4</B><P>
-                        Quel le nom du boss final  dans diablo 2 ?</TD>
-                        	<TD><INPUT TYPE = "radio" VALUE = ""
-                                    onClick = "this.form[4].value=1">Ball<BR>
-                                   <INPUT TYPE = "radio" VALUE = ""
-                                    onClick = "this.form[4].value=2">Diablo<BR>
-                                   <INPUT TYPE = "radio" VALUE = ""
-                                    onClick = "this.form[4].value=3">Mephistos<BR>
-                                   <INPUT TYPE = "radio" VALUE = ""
-                                    onClick = "this.form[4].value=4">Duriel<BR></TD>   
-                </TR>
-				<TR BGCOLOR="grey">
-                	<TD><B>Question 5</B><P>
-                            </TD>
-                            Qui a crée Blade and soul?	<TD><INPUT TYPE = "radio" VALUE = ""
-                                        onClick = "this.form[5].value=1">NcSoft<BR>
-                                       <INPUT TYPE = "radio" VALUE = ""
-                                        onClick = "this.form[5].value=2">Bohemia Interractive<BR>
-                                       <INPUT TYPE = "radio" VALUE = ""
-                                        onClick = "this.form[5].value=3">Gameforge LIve<BR>
-                                       <INPUT TYPE = "radio" VALUE = ""
-                                        onClick = "this.form[5].value=4">Autre<BR></TD>   
-                </TR>
-                </TABLE>
-                <P>
-                          <INPUT TYPE = "button" NAME = "Corriger" VALUE = "Regardez si vous avez raison"
-                            onClick = "process(this.form)"> 
-                	  <INPUT TYPE = "button" NAME = "Tout effacer" VALUE = "Recommencer"
-                            onClick = "{reset(this.form); effacer(this.form)}">
-                </FORM>
-            </CENTER>
-        </BODY>
-    </HTML>
+	<body ng-controller="QuizController" style="background-size:cover;background-image: url('{{image}}');" >
+		<div class= "quiz" style="display:{{visuel}}">
+			<p class ="domaine">{{domaine}}</p>
+			<h1>{{questionnaire.question}}</h1>
+			<form ng-submit="valider()">
+				<input type="radio" ng-model="reponse" value="reponseA">{{questionnaire.reponseA}}<br>
+				<input type="radio" ng-model="reponse" value="reponseB">{{questionnaire.reponseB}}<br>
+				<input type="radio" ng-model="reponse" value="reponseC">{{questionnaire.reponseC}}<br>
+				<input type="radio" ng-model="reponse" value="reponseD">{{questionnaire.reponseD}}<br>
+				<input type="submit" value="valider" class="btn btn-success" id="boutonV">
+			</form>
+		</div>
+		<div class ="resultat" style="display:{{resultat}}">
+		<h1>Total des points:{{points}} /80</h1>
+		
+		<p>Points dans la catégorie Jeux video: {{categorie1}} /20</p>
+		<p>Points dans la catégorie Animateur: {{categorie2}} /20</p>
+		<p>Points dans la catégorie Chanteur: {{categorie3}} /20</p>
+		<p>Points dans la catégorie Culture Géneral: {{categorie4}} /20</p>
+		<strong><p>{{texte}}</p></strong>
+		<button class="btn btn-danger" ng-click="clear()">recommencer</button>
+		</div>
+		
+		<div class ="solution" style="display:{{resultat}}">
+		<h1 id ="h1soluce">Solution</h1>
+		
+		<ul class="test">
+
+      <li ng-repeat="question in questions">
+	    <strong class="question">{{question.question}}</strong>
+	    <p class="reponse">{{question.bonneReponse}}</p>
+	  </li>
+	  <ul>
+	
+		</div>
+		
+	</body>
+</html>
