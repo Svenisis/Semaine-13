@@ -1,11 +1,14 @@
 h1, h2{
 	text-align: center;
+	color:black;
 	}
 	
 body{
-	background-image: url(image.jpg);
+	background-image: url(vindicare.png);
 	}
-	
-h1 {
-    background-color: red;
+ul {
+	text-align: center;
+}
+li {
+	text-align:center;
 }
